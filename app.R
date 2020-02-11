@@ -10,7 +10,9 @@ library(DT)
 states <- read.csv("states.csv")
 variables1 <- read.csv("general_income_vars.csv")
 variables1$name <- as.character(variables1$name)
-census_api_key("4b8e206a26dcf3fb692e924c9b2dcf67d3ec030a")
+
+## GET A CENSUS API KEY HERE https://api.census.gov/data/key_signup.html
+census_api_key("YOUR_KEY_HERE")
 
 #generate ui with input to change variables
 ui <- fluidPage(titlePanel("Census Data Browser"),
